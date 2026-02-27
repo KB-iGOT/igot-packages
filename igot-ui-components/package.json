@@ -1,6 +1,6 @@
 {
   "name": "@igot/ui-components",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "description": "iGOT UI Components — accessible, themeable buttons, cards, form fields, badges & a11y utilities",
   "scripts": {

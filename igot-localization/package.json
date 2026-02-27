@@ -1,6 +1,6 @@
 {
   "name": "@igot/localization",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "description": "iGOT Localization — multilingual i18n service with RTL support",
   "scripts": {
