@@ -1,0 +1,181 @@
+// ─────────────────────────────────────────────────────────
+// Design Tokens — igot-design-system
+// ─────────────────────────────────────────────────────────
+// Single source of truth for all design primitives.
+// These CSS custom properties are consumed by both
+// Tailwind (via tailwind.config.js) and Angular Material.
+//
+// Sourced from igot_design_data_knowledge:
+// - Typography_Size, Source_Number (fonts/weights/lineheights)
+// - Auto_Layout_Size (spacing)
+// - Screen_Size (breakpoints)
+// - Radius_Size, Stroke_Size
+//
+// BREAKPOINT REFERENCE:
+// ┌──────────────────────────┬───────────┬───────────┐
+// │  Breakpoint              │  Min      │  Max      │
+// ├──────────────────────────┼───────────┼───────────┤
+// │  Mobile                  │  320px    │  425px    │
+// │  Tablet Portrait         │  426px    │  1023px   │
+// │  Tablet Landscape        │  649px    │  1365px   │
+// │  Small Desktop           │  1024px   │  1339px   │
+// │  Large Desktop           │  1440px   │  1919px   │
+// │  Extra Large Desktop     │  1920px   │  beyond   │
+// └──────────────────────────┴───────────┴───────────┘
+// ─────────────────────────────────────────────────────────
+
+:root {
+  // ── Typography ──────────────────────────────────────────
+  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  // ── Font Size Scale (from knowledge Typography_Size) ───
+  --text-12: 0.75rem;    // 12px — Fine Print, Label, Caption
+  --text-14: 0.875rem;   // 14px — Button 2, Body 2, Sub Heading 2 (mobile)
+  --text-16: 1rem;       // 16px — Button 1, Body 1, Sub Heading 1 (mobile), Title 2 (mobile)
+  --text-18: 1.125rem;   // 18px — Title 1 (mobile), Sub Heading 1 (desktop)
+  --text-20: 1.25rem;    // 20px — Heading 2 (mobile), Title 2 (desktop)
+  --text-24: 1.5rem;     // 24px — Heading 1 (mobile), Title 1 (desktop)
+  --text-28: 1.75rem;    // 28px — Display 2 (mobile), Heading 2 (desktop)
+  --text-30: 1.875rem;   // 30px — Display 1 (mobile)
+  --text-32: 2rem;       // 32px — Heading 1 (desktop)
+  --text-40: 2.5rem;     // 40px — Display 2 (desktop)
+  --text-48: 3rem;       // 48px — Display 1 (desktop)
+
+  // ── Font Weights (from Source_Number) ───────────────────
+  --font-thin: 100;
+  --font-extra-light: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  // ── Line Heights (from Source_Number) ───────────────────
+  --leading-1: 1px;
+  --leading-2: 2px;
+  --leading-4: 4px;
+  --leading-6: 6px;
+  --leading-8: 8px;
+  --leading-10: 10px;
+  --leading-12: 12px;
+  --leading-14: 14px;
+  --leading-16: 16px;
+  --leading-20: 20px;
+  --leading-24: 24px;
+  --leading-28: 28px;
+  --leading-32: 32px;
+  --leading-36: 36px;
+  --leading-40: 40px;
+  --leading-44: 44px;
+  --leading-48: 48px;
+  --leading-64: 64px;
+  --leading-128: 128px;
+  --leading-256: 256px;
+
+  // ── Spacing Scale (4px grid + Auto_Layout_Size names) ──
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem;  // 2px
+  --space-1: 0.25rem;     // 4px   — XS
+  --space-1-5: 0.375rem;  // 6px
+  --space-2: 0.5rem;      // 8px   — S
+  --space-3: 0.75rem;     // 12px  — M
+  --space-4: 1rem;        // 16px  — L
+  --space-5: 1.25rem;     // 20px  — XL
+  --space-6: 1.5rem;      // 24px  — XXL
+  --space-7: 1.75rem;     // 28px
+  --space-8: 2rem;        // 32px  — XXXL
+  --space-9: 2.25rem;     // 36px
+  --space-10: 2.5rem;     // 40px
+  --space-11: 2.75rem;    // 44px
+  --space-12: 3rem;       // 48px
+  --space-14: 3.5rem;     // 56px
+  --space-16: 4rem;       // 64px
+  --space-20: 5rem;       // 80px
+  --space-24: 6rem;       // 96px
+  --space-28: 7rem;       // 112px
+  --space-32: 8rem;       // 128px
+  --space-36: 9rem;       // 144px
+  --space-40: 10rem;      // 160px
+
+  // Named layout tokens (from Auto_Layout_Size)
+  --layout-none: 0;
+  --layout-xs: 0.25rem;   // 4px
+  --layout-s: 0.5rem;     // 8px
+  --layout-m: 0.75rem;    // 12px
+  --layout-l: 1rem;       // 16px
+  --layout-xl: 1.25rem;   // 20px
+  --layout-xxl: 1.5rem;   // 24px
+  --layout-xxxl: 2rem;    // 32px
+
+  // ── Breakpoints (from Screen_Size knowledge) ────────────
+  --bp-mobile: 320px;
+  --bp-tablet-portrait: 426px;
+  --bp-tablet-landscape: 649px;
+  --bp-small-desktop: 1024px;
+  --bp-large-desktop: 1440px;
+  --bp-extra-large: 1920px;
+
+  // ── Border Radius (from Radius_Size) ───────────────────
+  --radius-sm: 4px;       //  4px
+  --radius-md: 8px;       //  8px
+  --radius-lg: 12px;      // 12px
+  --radius-xl: 16px;      // 16px
+  --radius-full: 999px;   // pill / circle
+
+  // ── Border / Stroke (from Stroke_Size) ─────────────────
+  --border-thin: 1px;
+  --border-thick: 2px;
+
+  // ── Icon Sizes (from Icon_Size) ────────────────────────
+  --icon-xs: 16px;
+  --icon-sm: 24px;
+  --icon-md: 32px;
+  --icon-lg: 40px;
+
+  // ── Grid System (from Grid_System_Size) ────────────────
+  --grid-mobile-columns: 4;
+  --grid-mobile-gutter: 20px;
+  --grid-mobile-margin: 20px;
+  --grid-desktop-columns: 12;
+  --grid-desktop-gutter: 16px;
+  --grid-desktop-margin: 16px;
+
+  // ── Shadows ─────────────────────────────────────────────
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  // ── Transitions ─────────────────────────────────────────
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  // ── Z-Index Scale ───────────────────────────────────────
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  // ── Layout ──────────────────────────────────────────────
+  --container-max-width: 120rem;   // 1920px
+  --container-xl: 90rem;           // 1440px
+  --container-lg: 64rem;           // 1024px
+  --container-md: 40rem;           // 640px
+  --container-sm: 26.625rem;       // 426px
+  --sidebar-width: 16rem;          // 256px
+  --sidebar-width-collapsed: 4rem; // 64px
+  --toolbar-height: 4rem;          // 64px
+  --bottom-nav-height: 3.5rem;     // 56px
+}

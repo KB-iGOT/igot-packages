@@ -1,0 +1,31 @@
+# Angular
+/dist
+/node_modules
+/.angular
+*.tsbuildinfo
+
+# Build outputs
+/build
+/tmp
+
+# Dependencies
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.log
+*.tmp
